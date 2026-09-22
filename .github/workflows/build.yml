@@ -1,0 +1,66 @@
+# Builds ScrapeMaster 2000 for Windows, Mac and Linux on GitHub's computers.
+# - Run it any time from the repo's "Actions" tab ("Run workflow"): the apps appear
+#   under that run's "Artifacts".
+# - Push a tag like v1.0 and the apps are also attached to a GitHub Release,
+#   giving you one download page to share.
+name: Build ScrapeMaster 2000
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            file: ScrapeMaster2000.exe
+            asset: ScrapeMaster2000-Windows.exe
+          - os: macos-latest
+            file: ScrapeMaster2000
+            asset: ScrapeMaster2000-Mac.zip
+          - os: ubuntu-latest
+            file: ScrapeMaster2000
+            asset: ScrapeMaster2000-Linux.zip
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pyinstaller certifi pillow
+      - run: python -m PyInstaller --noconfirm --clean scrapemaster2000.spec
+      - name: Package for download
+        shell: bash
+        run: |
+          cd dist
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            mv "${{ matrix.file }}" "${{ matrix.asset }}"
+          else
+            # zip keeps the "this is a program" permission that a bare download loses
+            chmod +x "${{ matrix.file }}"
+            zip -9 "${{ matrix.asset }}" "${{ matrix.file }}"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.asset }}
+          path: dist/${{ matrix.asset }}
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: out/*
