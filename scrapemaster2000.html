@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScrapeMaster 2000</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0221; --bg2: #1a0638; --panel: rgba(24, 8, 52, .78); --panel-solid: #1c0a3d;
+    --ink: #f3e9ff; --muted: #a58fd0; --line: rgba(255, 46, 196, .28);
+    --pink: #ff2ec4; --cyan: #22f2ff; --purple: #9d4dff; --sun1: #ffd319; --sun2: #ff2975;
+    --accent: var(--pink); --accent-ink: #12001f; --accent-soft: rgba(255, 46, 196, .14);
+    --ok: #3dffb0; --warn: #ff8a3d; --chip: rgba(157, 77, 255, .16);
+    --glow-pink: 0 0 6px rgba(255,46,196,.8), 0 0 18px rgba(255,46,196,.45);
+    --glow-cyan: 0 0 6px rgba(34,242,255,.8), 0 0 18px rgba(34,242,255,.45);
+    --check: repeating-conic-gradient(#20103f 0 25%, #170a30 0 50%) 0 0 / 16px 16px;
+    --display: "Orbitron", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body { margin: 0; min-height: 100vh; color: var(--ink); background: transparent;
+         font: 15px/1.45 "Exo 2", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  button, input { font: inherit; color: inherit; }
+
+  /* ---------- the neon-wave scene behind everything */
+  .scene { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+           background: linear-gradient(180deg, #07001a 0%, var(--bg2) 42%, #3b0a5c 62%, #0d0221 62.2%); }
+  .stars { position: absolute; inset: 0 0 40% 0; opacity: .7;
+           background-image:
+             radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+             radial-gradient(1px 1px at 28% 42%, #fff 50%, transparent 51%),
+             radial-gradient(1.5px 1.5px at 44% 12%, #fff 50%, transparent 51%),
+             radial-gradient(1px 1px at 63% 30%, #fff 50%, transparent 51%),
+             radial-gradient(1.5px 1.5px at 78% 16%, #fff 50%, transparent 51%),
+             radial-gradient(1px 1px at 88% 44%, #fff 50%, transparent 51%),
+             radial-gradient(1px 1px at 6% 50%, #fff 50%, transparent 51%),
+             radial-gradient(1px 1px at 55% 52%, #fff 50%, transparent 51%); }
+  .sun { position: absolute; left: 50%; top: 62%; width: min(46vw, 420px); aspect-ratio: 1;
+         transform: translate(-50%, -50%); border-radius: 50%;
+         background: linear-gradient(180deg, var(--sun1) 0%, #ff8c32 45%, var(--sun2) 100%);
+         box-shadow: 0 0 80px rgba(255, 41, 117, .55), 0 0 160px rgba(255, 140, 50, .25);
+         -webkit-mask: linear-gradient(180deg, #000 0 52%, transparent 52% 56%, #000 56% 64%, transparent 64% 69%,
+                       #000 69% 76%, transparent 76% 82%, #000 82% 88%, transparent 88% 100%);
+                 mask: linear-gradient(180deg, #000 0 52%, transparent 52% 56%, #000 56% 64%, transparent 64% 69%,
+                       #000 69% 76%, transparent 76% 82%, #000 82% 88%, transparent 88% 100%);
+         clip-path: inset(0 0 50% 0); opacity: .9; }
+  .floor { position: absolute; left: -50%; right: -50%; top: 62%; height: 80%;
+           transform: perspective(300px) rotateX(62deg); transform-origin: top center;
+           background:
+             linear-gradient(rgba(255,46,196,.9) 2px, transparent 2px) 0 0 / 100% 48px,
+             linear-gradient(90deg, rgba(255,46,196,.9) 2px, transparent 2px) 50% 0 / 64px 100%;
+           animation: drive 1.6s linear infinite;
+           -webkit-mask: linear-gradient(180deg, transparent, #000 25%);
+                   mask: linear-gradient(180deg, transparent, #000 25%);
+           filter: drop-shadow(0 0 4px rgba(255,46,196,.9)); }
+  .horizon { position: absolute; left: 0; right: 0; top: 62%; height: 2px; background: var(--pink);
+             box-shadow: var(--glow-pink), 0 0 40px rgba(255,46,196,.6); }
+  .scan { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 1px, transparent 1px 3px); }
+  @keyframes drive { to { background-position: 0 48px, 50% 0; } }
+  @media (prefers-reduced-motion: reduce) { .floor { animation: none; } }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 28px 20px 110px; position: relative; }
+
+  /* ---------- header */
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  .logo { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+          border: 2px solid var(--cyan); box-shadow: var(--glow-cyan), inset 0 0 12px rgba(34,242,255,.35);
+          background: rgba(34,242,255,.08); }
+  .logo svg { width: 24px; height: 24px; stroke: var(--cyan); filter: drop-shadow(0 0 4px var(--cyan)); }
+  h1 { font-family: var(--display); font-weight: 900; font-size: 28px; margin: 0; letter-spacing: .04em;
+       text-transform: uppercase; font-style: italic; line-height: 1.05;
+       background: linear-gradient(180deg, #fff 0%, #ffd0f2 40%, var(--pink) 100%);
+       -webkit-background-clip: text; background-clip: text; color: transparent;
+       filter: drop-shadow(0 0 8px rgba(255,46,196,.7)); }
+  h1 .yr { background: linear-gradient(180deg, #fff, var(--cyan)); -webkit-background-clip: text; background-clip: text;
+           filter: drop-shadow(0 0 6px rgba(34,242,255,.8)); }
+  .sub { color: var(--muted); font-size: 14px; margin: 3px 0 0; letter-spacing: .02em; }
+  .status { margin-left: auto; font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 8px;
+            font-family: var(--display); letter-spacing: .1em; text-transform: uppercase; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+  .dot.on { background: var(--ok); box-shadow: 0 0 8px var(--ok); }
+  .dot.off { background: var(--warn); box-shadow: 0 0 8px var(--warn); }
+
+  /* ---------- search */
+  .search { display: flex; gap: 10px; background: var(--panel); border: 2px solid var(--cyan);
+            border-radius: 14px; padding: 8px; backdrop-filter: blur(8px);
+            box-shadow: var(--glow-cyan), inset 0 0 24px rgba(34,242,255,.08); }
+  .search input { flex: 1; border: 0; background: transparent; padding: 10px 12px; outline: none; font-size: 17px;
+                  min-width: 0; color: #fff; caret-color: var(--pink); }
+  .search input::placeholder { color: rgba(165,143,208,.6); }
+
+  .btn { border: 1px solid var(--line); background: rgba(157,77,255,.12); border-radius: 10px; padding: 9px 16px;
+         cursor: pointer; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;
+         transition: box-shadow .15s, border-color .15s, background .15s; }
+  .btn:hover { border-color: var(--pink); box-shadow: var(--glow-pink); }
+  .btn.primary { background: linear-gradient(90deg, var(--pink), var(--purple)); color: #fff; border-color: transparent;
+                 font-family: var(--display); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px;
+                 box-shadow: 0 0 14px rgba(255,46,196,.55); text-shadow: 0 0 6px rgba(255,255,255,.5); }
+  .btn.primary:hover { box-shadow: 0 0 22px rgba(255,46,196,.85), 0 0 40px rgba(157,77,255,.5); }
+  .btn:disabled { opacity: .5; cursor: default; box-shadow: none; }
+  .btn svg { width: 16px; height: 16px; }
+
+  .notice { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: var(--panel);
+            border: 1px solid var(--line); display: none; backdrop-filter: blur(8px); }
+  .notice.show { display: block; }
+  .notice.err { border-color: var(--warn); box-shadow: 0 0 14px rgba(255,138,61,.35); }
+  .notice code { background: rgba(34,242,255,.1); color: var(--cyan); padding: 2px 6px; border-radius: 6px; }
+
+  /* ---------- toolbar */
+  .toolbar { display: none; margin-top: 22px; gap: 10px 18px; flex-wrap: wrap; align-items: center;
+             padding: 14px 16px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line);
+             backdrop-filter: blur(8px); }
+  .toolbar.show { display: flex; }
+  .page-info { width: 100%; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .page-info strong { font-family: var(--display); font-size: 16px; letter-spacing: .05em; color: var(--cyan);
+                      text-shadow: 0 0 8px rgba(34,242,255,.6); }
+  .page-info a { color: var(--muted); font-size: 13px; text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60ch; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip { border: 1px solid transparent; background: var(--chip); border-radius: 999px; padding: 4px 12px;
+          font-size: 12px; cursor: pointer; user-select: none; font-family: var(--display); letter-spacing: .06em; }
+  .chip:hover { border-color: var(--line); }
+  .chip.on { background: rgba(34,242,255,.12); border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 10px rgba(34,242,255,.4); }
+  .chip .n { opacity: .6; margin-left: 4px; }
+  label.ctl { font-size: 13px; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+  label.ctl input[type=range] { width: 120px; accent-color: var(--pink); }
+  label.ctl input[type=checkbox] { accent-color: var(--pink); width: 16px; height: 16px; }
+  .spacer { flex: 1; }
+
+  /* ---------- grid */
+  .grid { margin-top: 18px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .card { background: var(--panel-solid); border: 2px solid rgba(157,77,255,.35); border-radius: 12px; overflow: hidden;
+          cursor: pointer; position: relative; transition: border-color .15s, transform .15s, box-shadow .15s; }
+  .card:hover { transform: translateY(-2px); border-color: var(--purple); box-shadow: 0 0 16px rgba(157,77,255,.5); }
+  .card:focus-visible { outline: none; border-color: var(--cyan); box-shadow: var(--glow-cyan); }
+  .card.sel { border-color: var(--pink); box-shadow: var(--glow-pink); }
+  .thumb { aspect-ratio: 1; background: var(--check); display: grid; place-items: center; overflow: hidden; position: relative; }
+  .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .thumb .ph { color: var(--muted); font-size: 12px; }
+  .meta { padding: 8px 10px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 6px;
+          border-top: 1px solid rgba(157,77,255,.25); }
+  .meta .name { color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .meta .dim { white-space: nowrap; flex-shrink: 0; }
+  .tick { position: absolute; top: 8px; left: 8px; width: 24px; height: 24px; border-radius: 50%;
+          background: rgba(13,2,33,.7); border: 2px solid rgba(243,233,255,.6); display: grid; place-items: center; }
+  .card.sel .tick { background: var(--pink); border-color: var(--pink); box-shadow: var(--glow-pink); }
+  .tick svg { width: 14px; height: 14px; stroke: #fff; opacity: 0; }
+  .card.sel .tick svg { opacity: 1; }
+  .actions { position: absolute; top: 8px; right: 8px; display: flex; gap: 4px; opacity: 0; transition: opacity .12s; }
+  .card:hover .actions, .card:focus-within .actions { opacity: 1; }
+  .icon-btn { width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--cyan); background: rgba(13,2,33,.85);
+              display: grid; place-items: center; cursor: pointer; }
+  .icon-btn:hover { box-shadow: var(--glow-cyan); }
+  .icon-btn svg { width: 16px; height: 16px; stroke: var(--cyan); }
+  .card.bad .thumb { opacity: .45; }
+  .badge { font-size: 10px; background: var(--chip); padding: 1px 6px; border-radius: 6px; font-family: var(--display); letter-spacing: .06em; }
+  .badge.orig { position: absolute; left: 8px; bottom: 8px; background: rgba(13,2,33,.85); color: var(--cyan);
+                border: 1px solid var(--cyan); box-shadow: 0 0 8px rgba(34,242,255,.5); text-transform: uppercase; }
+
+  .empty { text-align: center; color: var(--ink); padding: 60px 20px; }
+  .empty div { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(13,2,33,.75); }
+  .empty svg { width: 56px; height: 56px; stroke: var(--purple); margin-bottom: 10px; filter: drop-shadow(0 0 6px var(--purple)); }
+
+  /* ---------- selection bar */
+  .bar { position: fixed; left: 50%; bottom: 20px; transform: translate(-50%, 140px); transition: transform .2s;
+         background: rgba(13,2,33,.92); color: var(--ink); border: 2px solid var(--pink); border-radius: 14px;
+         padding: 10px 10px 10px 18px; display: flex; align-items: center; gap: 14px; z-index: 5;
+         box-shadow: var(--glow-pink), 0 10px 40px rgba(0,0,0,.6); backdrop-filter: blur(8px); }
+  .bar.show { transform: translate(-50%, 0); }
+  #barText { white-space: nowrap; font-family: var(--display); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--pink); }
+  .bar .ghost { background: transparent; border-color: transparent; }
+
+  .spinner { width: 16px; height: 16px; border: 2px solid var(--cyan); border-right-color: transparent;
+             border-radius: 50%; animation: spin .7s linear infinite; display: inline-block; filter: drop-shadow(0 0 4px var(--cyan)); }
+  .btn.primary .spinner { border-color: #fff; border-right-color: transparent; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ---------- lightbox */
+  .lightbox { position: fixed; inset: 0; background: rgba(7,0,26,.92); display: none; z-index: 10;
+              align-items: center; justify-content: center; flex-direction: column; gap: 14px; padding: 30px; }
+  .lightbox.show { display: flex; }
+  .lightbox img { max-width: 100%; max-height: calc(100vh - 150px); object-fit: contain; background: var(--check);
+                  border-radius: 8px; border: 2px solid var(--cyan); box-shadow: var(--glow-cyan); }
+  .lightbox .cap { color: var(--muted); font-size: 13px; text-align: center; word-break: break-all; max-width: 900px; }
+  .lightbox .row { display: flex; gap: 8px; }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 21px; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .status { display: none; }
+    .bar { left: 16px; right: 16px; transform: translateY(140px); }
+    .bar.show { transform: none; }
+  }
+</style>
+</head>
+<body>
+<div class="scene" aria-hidden="true"><div class="stars"></div><div class="sun"></div><div class="floor"></div><div class="horizon"></div><div class="scan"></div></div>
+<div class="wrap">
+  <header>
+    <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+    <div>
+      <h1>ScrapeMaster <span class="yr">2000</span></h1>
+      <p class="sub">Paste a web address. Grab every image. Full size.</p>
+    </div>
+    <div class="status"><span class="dot" id="dot"></span><span id="statusText">Checking helper…</span></div>
+  </header>
+
+  <form class="search" id="form">
+    <input id="url" type="text" placeholder="https://example.com" autocomplete="off" spellcheck="false" autofocus>
+    <button class="btn primary" id="go" type="submit">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      Find images
+    </button>
+  </form>
+
+  <div class="notice" id="notice"></div>
+
+  <div class="toolbar" id="toolbar">
+    <div class="page-info"><strong id="pageTitle"></strong><a id="pageLink" target="_blank" rel="noopener"></a></div>
+    <div class="chips" id="typeChips"></div>
+    <label class="ctl">Min size <input type="range" id="minSize" min="0" max="1000" step="25" value="0"> <span id="minSizeVal">any</span></label>
+    <label class="ctl"><input type="checkbox" id="sameDomain"> This site only</label>
+    <label class="ctl" title="Removes resizing settings like ?fm=jpg&w=250 from image addresses to get the original, full-size file">
+      <input type="checkbox" id="originals" checked> Full-size originals</label>
+    <span class="spacer"></span>
+    <button class="btn" id="selAll" type="button">Select all shown</button>
+    <button class="btn" id="selNone" type="button">Clear</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
+    <div>Images you find will appear here.</div>
+  </div>
+</div>
+
+<div class="bar" id="bar">
+  <span id="barText">0 selected</span>
+  <button class="btn ghost" id="barClear" type="button">Clear</button>
+  <button class="btn primary" id="download" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+    <span id="dlText">Download</span>
+  </button>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <img id="lbImg" alt="">
+  <div class="cap" id="lbCap"></div>
+  <div class="row">
+    <button class="btn" id="lbSave" type="button">Save image</button>
+    <button class="btn" id="lbOpen" type="button">Open original</button>
+    <button class="btn" id="lbClose" type="button">Close</button>
+  </div>
+</div>
+
+<script>
+(() => {
+  // When opened as a file, talk to the helper directly; when served by it, use relative paths.
+  const API = location.protocol === "file:" ? "http://127.0.0.1:8787" : "";
+  const $ = (id) => document.getElementById(id);
+
+  const state = { page: null, items: [], selected: new Set(), types: new Set(), minSize: 0, sameDomain: false };
+  let scanToken = 0;
+
+  const icons = {
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>',
+    zoom: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>',
+    save: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>',
+  };
+
+  // ---------- helper connection
+  async function ping() {
+    try {
+      const r = await fetch(API + "/api/ping", { cache: "no-store" });
+      if (!r.ok) throw 0;
+      $("dot").className = "dot on"; $("statusText").textContent = "Ready";
+      hideNotice(); return true;
+    } catch {
+      $("dot").className = "dot off"; $("statusText").textContent = "Helper not running";
+      showNotice(`<strong>The helper isn't running.</strong> Browsers don't let a web page read other websites directly,
+        so this tool uses a small helper on your computer. Open a terminal in this folder and run
+        <code>python scrapemaster2000.py</code> (or <code>python3 scrapemaster2000.py</code> on Mac/Linux).
+        It will open this page for you. Leave the terminal window open while you use it.`, true);
+      return false;
+    }
+  }
+
+  function showNotice(html, err) { const n = $("notice"); n.innerHTML = html; n.className = "notice show" + (err ? " err" : ""); }
+  function hideNotice() { $("notice").className = "notice"; }
+
+  // ---------- scanning
+  $("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const url = $("url").value.trim();
+    if (!url) { $("url").focus(); return; }
+    if (!(await ping())) return;
+
+    const token = ++scanToken;
+    setBusy(true);
+    hideNotice();
+    try {
+      const r = await fetch(API + "/api/scan?url=" + encodeURIComponent(url));
+      const data = await r.json();
+      if (token !== scanToken) return;
+      if (!r.ok) throw new Error(data.error || "Something went wrong.");
+      loadPage(data, token);
+    } catch (err) {
+      showNotice(`<strong>Couldn't read that page.</strong> ${escapeHtml(err.message)}`, true);
+    } finally {
+      if (token === scanToken) setBusy(false);
+    }
+  });
+
+  function setBusy(b) {
+    const go = $("go");
+    go.disabled = b;
+    go.innerHTML = b ? '<span class="spinner"></span> Looking…'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> Find images';
+  }
+
+  function loadPage(data, token) {
+    state.page = data;
+    state.types.clear();
+    $("pageTitle").textContent = data.title || new URL(data.page).hostname;
+    $("pageLink").textContent = data.page; $("pageLink").href = data.page;
+    $("toolbar").className = "toolbar show";
+    buildItems(token);
+  }
+
+  // Turn the scanned list into cards. With "Full-size originals" on, resize parameters are
+  // stripped and images that were only different sizes of the same file are merged.
+  function buildItems(token) {
+    const data = state.page;
+    const originals = $("originals").checked;
+    state.items.forEach((it) => it.blobUrl && URL.revokeObjectURL(it.blobUrl));
+    state.selected.clear();
+    const byUrl = new Map();
+    for (const img of data.images) {
+      const useOrig = originals && img.original;
+      const url = useOrig ? img.original : img.url;
+      if (byUrl.has(url)) { byUrl.get(url).variants++; continue; }
+      byUrl.set(url, {
+        ...img, url, fallback: useOrig ? img.url : null, stripped: !!useOrig, variants: 1,
+        type: guessType(url), status: "loading", w: 0, h: 0, bytes: 0, blobUrl: null,
+      });
+    }
+    state.items = [...byUrl.values()].map((it, i) => ({ ...it, id: i }));
+    renderAll(token);
+  }
+
+  function renderAll(token) {
+    if (!state.items.length) {
+      $("grid").innerHTML = "";
+      $("empty").style.display = "";
+      $("empty").querySelector("div").textContent =
+        "No images found in this page's HTML. Some sites load their images with JavaScript, which this tool can't see.";
+      updateChips(); updateBar();
+      return;
+    }
+    $("empty").style.display = "none";
+    renderGrid();
+    updateChips();
+    updateBar();
+    loadThumbs(token);
+  }
+
+  // Load thumbnails through the helper, a few at a time.
+  async function loadThumbs(token) {
+    const queue = [...state.items];
+    const worker = async () => {
+      while (queue.length && token === scanToken) {
+        const it = queue.shift();
+        try {
+          let r = await fetch(API + "/api/image?url=" + encodeURIComponent(it.url));
+          if (!r.ok && it.fallback) {
+            // The site wouldn't serve the stripped address - use the one from the page instead.
+            r = await fetch(API + "/api/image?url=" + encodeURIComponent(it.fallback));
+            if (r.ok) { it.url = it.fallback; it.fallback = null; it.stripped = false; it.fellBack = true; }
+          }
+          if (!r.ok) throw 0;
+          const blob = await r.blob();
+          if (token !== scanToken) return;
+          it.bytes = blob.size;
+          it.type = typeFromMime(blob.type) || it.type;
+          it.blobUrl = URL.createObjectURL(blob);
+          await new Promise((res) => {
+            const im = new Image();
+            im.onload = () => { it.w = im.naturalWidth; it.h = im.naturalHeight; res(); };
+            im.onerror = () => res();
+            im.src = it.blobUrl;
+          });
+          it.status = "ok";
+        } catch {
+          it.status = "bad";
+        }
+        updateCard(it);
+        updateChips();
+      }
+    };
+    await Promise.all(Array.from({ length: 6 }, worker));
+    if (token === scanToken) applyFilters();
+  }
+
+  // ---------- rendering
+  function renderGrid() {
+    const grid = $("grid");
+    grid.innerHTML = "";
+    for (const it of state.items) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.dataset.id = it.id;
+      card.tabIndex = 0;
+      card.innerHTML = `
+        <div class="thumb"><span class="ph"><span class="spinner"></span></span></div>
+        <div class="tick">${icons.check}</div>
+        <div class="actions">
+          <button class="icon-btn" data-act="zoom" title="Preview">${icons.zoom}</button>
+          <button class="icon-btn" data-act="save" title="Save this image">${icons.save}</button>
+        </div>
+        <div class="meta"><span class="name"></span><span class="dim"></span></div>`;
+      card.querySelector(".name").textContent = shortName(it.url);
+      card.title = it.url;
+      grid.appendChild(card);
+    }
+    applyFilters();
+  }
+
+  function updateCard(it) {
+    const card = $("grid").querySelector(`.card[data-id="${it.id}"]`);
+    if (!card) return;
+    const thumb = card.querySelector(".thumb");
+    if (it.status === "ok") {
+      thumb.innerHTML = "";
+      const im = document.createElement("img");
+      im.src = it.blobUrl; im.alt = ""; im.loading = "lazy";
+      thumb.appendChild(im);
+      card.querySelector(".dim").textContent =
+        (it.w ? `${it.w}×${it.h}` : it.type.toUpperCase()) + " · " + fmtBytes(it.bytes);
+      if (it.stripped) {
+        const b = document.createElement("span");
+        b.className = "badge orig"; b.textContent = "full size";
+        b.title = "Resize settings removed" + (it.variants > 1 ? ` - merged ${it.variants} sizes of this image` : "");
+        thumb.appendChild(b);
+      }
+    } else {
+      card.classList.add("bad");
+      thumb.innerHTML = '<span class="ph">Couldn\'t load</span>';
+      card.querySelector(".dim").innerHTML = '<span class="badge">error</span>';
+    }
+    applyFilters();
+  }
+
+  function visible(it) {
+    if (state.types.size && !state.types.has(it.type)) return false;
+    if (state.sameDomain && !it.same_domain) return false;
+    if (state.minSize && it.status === "ok" && it.w && Math.max(it.w, it.h) < state.minSize) return false;
+    if (state.minSize && it.status === "bad") return false;
+    return true;
+  }
+
+  function applyFilters() {
+    let shown = 0;
+    for (const it of state.items) {
+      const card = $("grid").querySelector(`.card[data-id="${it.id}"]`);
+      if (!card) continue;
+      const v = visible(it);
+      card.style.display = v ? "" : "none";
+      if (v) shown++;
+    }
+    if (state.items.length) {
+      $("empty").style.display = shown ? "none" : "";
+      if (!shown) $("empty").querySelector("div").textContent = "No images match these filters.";
+    }
+  }
+
+  function updateChips() {
+    const counts = {};
+    state.items.forEach((it) => (counts[it.type] = (counts[it.type] || 0) + 1));
+    const wrap = $("typeChips");
+    wrap.innerHTML = "";
+    const all = document.createElement("span");
+    all.className = "chip" + (state.types.size ? "" : " on");
+    all.innerHTML = `All<span class="n">${state.items.length}</span>`;
+    all.onclick = () => { state.types.clear(); updateChips(); applyFilters(); };
+    wrap.appendChild(all);
+    Object.keys(counts).sort().forEach((t) => {
+      const c = document.createElement("span");
+      c.className = "chip" + (state.types.has(t) ? " on" : "");
+      c.innerHTML = `${t.toUpperCase()}<span class="n">${counts[t]}</span>`;
+      c.onclick = () => { state.types.has(t) ? state.types.delete(t) : state.types.add(t); updateChips(); applyFilters(); };
+      wrap.appendChild(c);
+    });
+  }
+
+  function updateBar() {
+    const n = state.selected.size;
+    $("bar").className = "bar" + (n ? " show" : "");
+    $("barText").textContent = `${n} selected`;
+    $("dlText").textContent = n === 1 ? "Download" : "Download as ZIP";
+    document.querySelectorAll(".card").forEach((c) => c.classList.toggle("sel", state.selected.has(+c.dataset.id)));
+  }
+
+  // ---------- interactions
+  $("grid").addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    if (!card) return;
+    const it = state.items[+card.dataset.id];
+    const act = e.target.closest("[data-act]")?.dataset.act;
+    if (act === "zoom") return openLightbox(it);
+    if (act === "save") return saveOne(it);
+    toggle(it.id);
+  });
+  $("grid").addEventListener("keydown", (e) => {
+    const card = e.target.closest(".card");
+    if (card && (e.key === " " || e.key === "Enter") && e.target === card) { e.preventDefault(); toggle(+card.dataset.id); }
+  });
+  function toggle(id) { state.selected.has(id) ? state.selected.delete(id) : state.selected.add(id); updateBar(); }
+
+  $("selAll").onclick = () => { state.items.filter((it) => visible(it) && it.status !== "bad").forEach((it) => state.selected.add(it.id)); updateBar(); };
+  $("selNone").onclick = $("barClear").onclick = () => { state.selected.clear(); updateBar(); };
+
+  $("minSize").oninput = (e) => {
+    state.minSize = +e.target.value;
+    $("minSizeVal").textContent = state.minSize ? `${state.minSize}px+` : "any";
+    applyFilters();
+  };
+  $("sameDomain").onchange = (e) => { state.sameDomain = e.target.checked; applyFilters(); };
+  $("originals").onchange = () => { if (state.page) buildItems(++scanToken); };
+
+  $("download").onclick = async () => {
+    const chosen = state.items.filter((it) => state.selected.has(it.id));
+    if (chosen.length === 1) return saveOne(chosen[0]);
+    const btn = $("download");
+    btn.disabled = true; $("dlText").textContent = "Zipping…";
+    try {
+      const host = state.page ? new URL(state.page.page).hostname : "images";
+      const r = await fetch(API + "/api/zip", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ urls: chosen.map((it) => it.url), name: "images_" + host }),
+      });
+      if (!r.ok) throw new Error();
+      triggerDownload(await r.blob(), `images_${host}.zip`);
+    } catch {
+      showNotice("<strong>The download didn't work.</strong> Check that the helper is still running and try again.", true);
+    } finally {
+      btn.disabled = false; updateBar();
+    }
+  };
+
+  function saveOne(it) {
+    if (it.blobUrl) {
+      fetch(it.blobUrl).then((r) => r.blob()).then((b) => triggerDownload(b, fileName(it)));
+    } else {
+      window.open(API + "/api/image?download=1&url=" + encodeURIComponent(it.url));
+    }
+  }
+
+  function triggerDownload(blob, name) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  }
+
+  // Lightbox
+  let lbItem = null;
+  function openLightbox(it) {
+    lbItem = it;
+    $("lbImg").src = it.blobUrl || "";
+    $("lbCap").textContent = `${it.url}${it.w ? `  ·  ${it.w}×${it.h}` : ""}${it.bytes ? `  ·  ${fmtBytes(it.bytes)}` : ""}  ·  found in ${it.found_in}`;
+    $("lightbox").className = "lightbox show";
+  }
+  const closeLb = () => { $("lightbox").className = "lightbox"; lbItem = null; };
+  $("lbClose").onclick = closeLb;
+  $("lightbox").onclick = (e) => { if (e.target.id === "lightbox") closeLb(); };
+  $("lbSave").onclick = () => lbItem && saveOne(lbItem);
+  $("lbOpen").onclick = () => lbItem && window.open(lbItem.url, "_blank", "noopener");
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+
+  // ---------- small utils
+  function guessType(url) {
+    const m = new URL(url).pathname.toLowerCase().match(/\.(jpe?g|png|gif|webp|svg|bmp|ico|avif|tiff?)$/);
+    if (!m) return "other";
+    return m[1] === "jpeg" ? "jpg" : m[1] === "tiff" ? "tif" : m[1];
+  }
+  function typeFromMime(m) {
+    return ({ "image/jpeg": "jpg", "image/png": "png", "image/gif": "gif", "image/webp": "webp", "image/svg+xml": "svg",
+      "image/bmp": "bmp", "image/x-icon": "ico", "image/vnd.microsoft.icon": "ico", "image/avif": "avif", "image/tiff": "tif" })[m];
+  }
+  function shortName(url) {
+    try { const p = decodeURIComponent(new URL(url).pathname.split("/").pop()); return p || new URL(url).hostname; }
+    catch { return url; }
+  }
+  function fileName(it) {
+    let n = shortName(it.url).replace(/[^\w.\-]+/g, "_").slice(0, 120) || "image";
+    if (!/\.[a-z0-9]{2,5}$/i.test(n) && it.type !== "other") n += "." + it.type;
+    return n;
+  }
+  function fmtBytes(b) { return b < 1024 ? b + " B" : b < 1048576 ? (b / 1024).toFixed(0) + " KB" : (b / 1048576).toFixed(1) + " MB"; }
+  function escapeHtml(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+
+  ping();
+})();
+</script>
+</body>
+</html>
